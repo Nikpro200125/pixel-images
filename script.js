@@ -19,7 +19,7 @@ image.addEventListener('load', function(){
     ctx.putImageData(scannedImage, 0, 0);
 
     let particles = [];
-    const numberOfPartincles = 5000;
+    const numberOfParticles = 5000;
 
     //calculate relative brightness of each pixels
     let mappedImage = [];
@@ -72,7 +72,7 @@ image.addEventListener('load', function(){
 
     //create Particles
     function init() {
-        for (let i = 0; i < numberOfPartincles; i++) {
+        for (let i = 0; i < numberOfParticles; i++) {
             particles.push(new Partincal);
         }
     }
