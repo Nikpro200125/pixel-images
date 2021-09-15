@@ -11,7 +11,7 @@ let adjustY = 0;
 const mouse = {
     x: null,
     y: null,
-    radius: 150,
+    radius: 70,
 }
 
 window.addEventListener('mousemove', function(event){
@@ -28,10 +28,10 @@ class Particle {
     constructor(x, y){
         this.x = x;
         this.y = y;
-        this.size = 3;
+        this.size = 2;
         this.baseX = this.x;
         this.baseY = this.y;
-        this.density = (Math.random() * 40) + 5;
+        this.density = (Math.random() * 50) + 5;
     }
     draw(){
         ctx.fillStyle = 'white';
@@ -70,8 +70,8 @@ function init() {
     for (let y = 0, y2 = textCoordinates.height; y < y2; y++) {
         for(let x = 0, x2 = textCoordinates.width; x < x2; x++){
             if(textCoordinates.data[y * 4 * textCoordinates.width + x * 4  + 3] > 128){
-                let positionX = (x + adjustX) * 20;
-                let positionY = (y + adjustY) * 20;
+                let positionX = (x + adjustX) * 10;
+                let positionY = (y + adjustY) * 10;
                 particles.push(new Particle(positionX, positionY));
             }
         }
